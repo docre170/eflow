@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --accent-blue: #38bdf8;
+            --accent-green: #22c55e;
+            --accent-red: #ef4444;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+          /* Login Section */
+        .login-form input {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 6px;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: var(--accent-blue);
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            transform: translateY(-25%);
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+         .main-content {
+            display: grid;
+            grid-template-columns: 250px 1fr 300px;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+        
+    <div class="card">
+            <h2>Connexion</h2>
+            <form class="login-form">
+                <input type="email" placeholder="Email" >
+                <input type="password" placeholder="Mot de passe" >
+                <button type="button" class="btn-login">LOGIN</button>
+            </form>
+        </div>
+</body>
+</html>

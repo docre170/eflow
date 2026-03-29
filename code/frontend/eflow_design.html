@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eflow</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            .container {
+                padding: 1rem;
+                width: 95%;
+            }
+            .data-card {
+                padding: 1rem;
+            }
+            .controls {
+                grid-template-columns: 1fr;
+            }
+        }
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --start-color: #27ae60;
+            --stop-color: #e74c3c;
+            --alert-color: #f39c12;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .data-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--accent-color);
+        }
+
+        .data-item {
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+
+        .label {
+            font-weight: 600;
+            color: #666;
+        }
+
+        .value {
+            font-weight: bold;
+            color: var(--accent-color);
+            font-size: 1.3rem;
+        }
+
+        .status {
+            margin-top: 1rem;
+            font-weight: bold;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .controls {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            padding: 0.8rem;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s, opacity 0.2s;
+            color: white;
+            width: 100%;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .btn-start {
+            background-color: var(--start-color);
+        }
+
+        .btn-stop {
+            background-color: var(--stop-color);
+        }
+
+        .btn-reset {
+            background-color: var(--alert-color);
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Eflow Control Center</h1>
+        
+        <div class="data-card">
+            <div class="data-item">
+                <span class="label">Débit estimé :</span>
+                <span class="value">22.5 L/min</span>
+            </div>
+            <div class="data-item">
+                <span class="label">Volume actuel :</span>
+                <span class="value">3.48 Litres</span>
+            </div>
+            <div class="status">Statut : Système Prêt</div>
+        </div>
+
+        <div class="controls">
+            <button class="btn-start">START</button>
+            <button class="btn-stop">STOP</button>
+            <button class="btn-reset">Reset Alerte</button>
+        </div>
+    </div>
+</body>
+</html>
